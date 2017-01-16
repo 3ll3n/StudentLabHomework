@@ -1,24 +1,21 @@
 class Student
 
-  attr_accessor :name, :cohort, :talk, :fav_language
+  attr_accessor :name, :cohort
 
-  def initialize(student_name, cohort, talk, fav_language)
+  def initialize(student_name, cohort)
 
     @name = student_name
     @cohort = cohort
-    @talk = talk
-    @fav_language = fav_language
+    
 
   end
 
-  def get_student_to_talk
+  def talk
    return "I can talk"
   end
 
-  def fav_programming_language
-    if fav_language == "Ruby"
-      return "I love Ruby"
-    end
+  def fav_programming_language(fav_language)
+      return "I love #{fav_language}"
   end
 
 end

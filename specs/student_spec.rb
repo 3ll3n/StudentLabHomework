@@ -6,7 +6,7 @@ require_relative ("../Student")
 class TestStudent < Minitest::Test
 
   def setup
-    @daniel = Student.new("Daniel", 1, "I can talk", "I love Ruby")
+    @daniel = Student.new("Daniel", 1)
   end
 
   def test_student_get_name
@@ -23,11 +23,11 @@ class TestStudent < Minitest::Test
   end
 
   def test_get_student_to_talk
-    assert_equal("I can talk", @daniel.talk)
+    assert_equal("I can talk", @daniel.talk())
   end
 
   def test_students_fav_programming_language
-    assert_equal("I love Ruby", @daniel.fav_language)
+    assert_equal("I love Ruby", @daniel.fav_programming_language("Ruby"))
   end
 
 end
